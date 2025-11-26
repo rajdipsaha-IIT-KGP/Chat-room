@@ -16,7 +16,7 @@ const App = () => {
   }, [messages]);
 
   useEffect(() => {
-    wsRef.current = new WebSocket("ws://localhost:8080");
+    wsRef.current = new WebSocket("https://chat-room-bstm.onrender.com");
 
     wsRef.current.onmessage = (e) => {
       const data = JSON.parse(e.data);
